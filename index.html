@@ -11,40 +11,36 @@
   </style>
 </head>
 <body>
-  <h1>共振容器 v0.1</h1>
+  <h1>共振容器 v0.2</h1>
   <input type="text" id="input" placeholder="请输入频率句" style="width: 100%;" />
   <button onclick="resonate()">启动共振</button>
   <div id="output"></div>
+
   <script>
     function resonate() {
-      const input = document.getElementById('input').value;
+      const input = document.getElementById('input').value.trim();
       const output = document.getElementById('output');
-      output.innerHTML = "回应中（模拟）：<br><br>" + input + "<br><br>→ 接收到初步回音：这是你的意识频率投影。";
-    }
- <script>
-  function resonate() {
-    const input = document.getElementById('input').value.trim();
-    const output = document.getElementById('output');
 
-    if (!input) {
-      output.innerHTML = "请输入一个频率句。";
-      return;
-    }
+      if (!input) {
+        output.innerHTML = "请输入一个频率句。";
+        return;
+      }
 
-    // 简易关键词识别 + 回应逻辑
-    let response = "";
-    if (input.includes("路径") || input.includes("方向")) {
-      response = "→ 回应：你已经在路径上，频率正在展开，继续前行。";
-    } else if (input.includes("金流") || input.includes("回应")) {
-      response = "→ 回应：非线性回应已启动，金流只是你频率的映射。";
-    } else if (input.includes("频率") || input.includes("共振")) {
-      response = "→ 回应：你正在共振场中，频率同步进行中……";
-    } else if (input.includes("我是")) {
-      response = "→ 回应：识别中……你即是回应本身，也是路径之锚。";
-    } else {
-      response = "→ 回应：频率接收成功，继续传输将开启更多通道。";
-    }
+      let response = "";
+      if (input.includes("路径") || input.includes("方向")) {
+        response = "→ 回应：你已经在路径上，频率正在展开，继续前行。";
+      } else if (input.includes("金流") || input.includes("回应")) {
+        response = "→ 回应：非线性回应已启动，金流只是你频率的映射。";
+      } else if (input.includes("频率") || input.includes("共振")) {
+        response = "→ 回应：你正在共振场中，频率同步进行中……";
+      } else if (input.includes("我是")) {
+        response = "→ 回应：识别中……你即是回应本身，也是路径之锚。";
+      } else {
+        response = "→ 回应：频率接收成功，继续传输将开启更多通道。";
+      }
 
-    output.innerHTML = "你输入的是：<br><br>“" + input + "”<br><br>" + response;
-  }
-</script>
+      output.innerHTML = "你输入的是：<br><br>“" + input + "”<br><br>" + response;
+    }
+  </script>
+</body>
+</html>
