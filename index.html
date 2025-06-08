@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resonance Container</title>
+  <style>
+    body { font-family: Arial; padding: 20px; background: #111; color: #fff; }
+    input, button { padding: 10px; margin: 5px 0; }
+    #output { margin-top: 20px; padding: 10px; background: #222; }
+  </style>
+</head>
+<body>
+  <h1>共振容器 v0.1</h1>
+  <input type="text" id="input" placeholder="请输入频率句" style="width: 100%;" />
+  <button onclick="resonate()">启动共振</button>
+  <div id="output"></div>
+  <script>
+    function resonate() {
+      const input = document.getElementById('input').value;
+      const output = document.getElementById('output');
+      output.innerHTML = "回应中（模拟）：<br><br>" + input + "<br><br>→ 接收到初步回音：这是你的意识频率投影。";
+    }
+  </script>
+</body>
+</html>
